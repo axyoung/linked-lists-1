@@ -1,19 +1,23 @@
 #include "node.h"
 
-Node::Node(Student* student) {
-	student = 0; // not sure about this part and the student pointer
+Node::Node(Student* current) {
+	student = current;
 	next = NULL;
 }
 
 Node::~Node() {
-	delete &student;
+	delete student;
 	next = NULL;
 }
 
-void Node::setNext(Node* newStudent) {
-	student = newStudent;
+void Node::setNext(Node* newNode) {
+	next = newNode;
 }
 
-Node* Node::getNext(Node* newNext) {
+Node* Node::getNext() {
 	return next;
+}
+
+Student* Node::getStudent() {
+	return student;
 }

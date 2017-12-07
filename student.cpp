@@ -1,7 +1,9 @@
 #include "student.h"
 
-Student::Student() {}
+Student::Student(int id) {
+	studentID = id;
+}
 
-Student* Student::getStudent(Student* newStudent) {
-	return *student;
+int Student::getStudent() {
+	return studentID;
 }

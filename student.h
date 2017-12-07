@@ -1,12 +1,16 @@
 #ifndef STUDENT_H
 #define STUDENT_H
+#include <iostream>
+#include "node.h"
 
 using namespace std;
 
 class Student {
 	public:
-		Student();
+		Student(int);
+		int getStudentID();
 
 	private:
-		Student* student;
+		int studentID;
 };
+#endif
